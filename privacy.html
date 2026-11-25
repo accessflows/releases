@@ -85,6 +85,11 @@
         line-height: 1.3;
       }
 
+      h3 {
+        margin: 22px 0 8px;
+        font-size: 15px;
+      }
+
       p {
         margin: 0 0 12px;
       }
@@ -106,6 +111,26 @@
         color: var(--brand);
       }
 
+      table {
+        width: 100%;
+        margin: 0 0 14px;
+        border-collapse: collapse;
+        font-size: 14px;
+      }
+
+      th,
+      td {
+        padding: 8px 10px;
+        border-bottom: 1px solid var(--border);
+        text-align: left;
+        vertical-align: top;
+      }
+
+      th {
+        color: var(--muted);
+        font-weight: 600;
+      }
+
       .note {
         margin: 18px 0;
         padding: 12px 14px;
@@ -113,6 +138,22 @@
         border-radius: 8px;
         background: color-mix(in srgb, var(--brand) 8%, transparent);
         font-size: 14px;
+      }
+
+      .who {
+        margin: 18px 0 0;
+        padding: 14px 16px;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        font-size: 14px;
+      }
+
+      .who p {
+        margin: 0 0 6px;
+      }
+
+      .who p:last-child {
+        margin-bottom: 0;
       }
 
       footer {
@@ -128,27 +169,110 @@
     <main>
       <p class="brand">AccessFlows</p>
       <h1>Privacy Policy</h1>
-      <p class="meta">Last updated 25 November 2026</p>
+      <p class="meta">Version 2026-11.2 · Last updated 25 November 2026</p>
 
       <p class="lede">
-        AccessFlows is a local-first application. What you send and what comes back stays on your
-        machine. This page says exactly what leaves it, and only when you sign in or share something.
+        AccessFlows is local-first: the responses you get back, your history and your secrets stay on
+        your machine. This page says exactly what leaves it — and only when you sign in, share something,
+        or turn on a feature that needs someone else's server.
       </p>
 
-      <h2>1. What stays on your computer</h2>
+      <div class="who">
+        <p><strong>Who is responsible for your data</strong></p>
+        <p>
+          AccessFlows Co., Ltd. — 36 Trịnh Đình Thảo, phường Tân Phú, Ho Chi Minh City, Vietnam —
+          is the controller of what this policy describes.
+        </p>
+        <p>
+          Everything in this policy, including a request for your data:
+          <a href="mailto:legal@accessflows.com">legal@accessflows.com</a>.
+        </p>
+      </div>
+
+      <h2>1. What never leaves your computer</h2>
       <p>
-        Collections, requests, responses, headers, environment variables, history and your settings are
-        stored locally, in the application's own store. We do not run a proxy in the middle of your API
-        traffic: requests go from your machine to the endpoint you named, and we never see them or the
-        responses.
+        These are stored locally, in the application's own store, and are not uploaded anywhere:
+      </p>
+      <ul>
+        <li>the responses your requests come back with, and the history of what you sent;</li>
+        <li>
+          values you mark as <strong>secret</strong> — in an environment, in the globals, in the
+          application's secret store;
+        </li>
+        <li>certificates and keys, and the files you keep inside a collection;</li>
+        <li>your preferences, and the API key you give an AI provider.</li>
+      </ul>
+      <p>
+        We do not run a proxy in the middle of your API traffic: requests go from your machine to the
+        endpoint you named, and we never see them or the responses.
       </p>
 
-      <h2>2. What we hold when you have an account</h2>
+      <h2>2. What is synchronised when you sign in</h2>
+      <p>
+        Signing in switches the app to your account's workspace, and keeps it in step with our servers —
+        that is what makes the same workspace open on another machine. These are the records that are
+        synchronised:
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Record</th>
+            <th>What it carries</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Collections</td>
+            <td>the name, description, headers, authentication settings and scripts</td>
+          </tr>
+          <tr>
+            <td>Requests</td>
+            <td>
+              the URL, method, headers, body and tests of each request in the collection — with the
+              response left behind
+            </td>
+          </tr>
+          <tr>
+            <td>Environments and globals</td>
+            <td>
+              the variables and their values, <strong>except any variable marked secret</strong>, which
+              is filtered out before the record is queued
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        Responses, history, secret values and files are never part of this. A record that cannot be
+        uploaded waits on your machine and is sent when the connection returns.
+      </p>
+      <p>
+        The workspace you have open is the one that synchronises; the local workspace (the app before you
+        sign in) never does. Signing out stops it.
+      </p>
+
+      <h2>3. What you share, and for whom</h2>
+      <p>
+        A collection you share is uploaded so the people you shared it with can open it, together with the
+        name and description you gave it. A private share is readable by the people you named, and a share
+        to the Community is readable by anyone with the link and appears in the directory.
+      </p>
+      <p>
+        A collection whose environments carry secret values <strong>cannot be published</strong> until
+        those values are removed — the app refuses, so a published collection never contains one.
+      </p>
+      <p>
+        Unsharing deletes the stored copy shortly after. A revoked business verification hides the
+        Community shares of that account and deletes them 30 days later, unless it is restored first.
+        Deleting your account removes everything of yours that our servers hold — see section 10 for what
+        outlives it.
+      </p>
+
+      <h2>4. The account itself</h2>
       <p>An account needs an email address, and an account is only created if you choose to make one.</p>
       <ul>
         <li><strong>Email address</strong> — to sign you in, confirm the address, and reset a password.</li>
         <li>
-          <strong>Account identifier</strong> — a random id that ties your shares, your plan and your
+          <strong>Account identifier</strong> — a random id that ties your workspaces, shares, plan and
           settings to you.
         </li>
         <li>
@@ -156,102 +280,257 @@
           or Microsoft. With a provider we receive the address and the identifier it gives us, never a
           password.
         </li>
+        <li><strong>Profile you choose to set</strong> — a display name and an avatar, if you add them.</li>
         <li>
-          <strong>Profile you choose to set</strong> — a display name and an avatar, if you add them.
+          <strong>Which terms you accepted</strong> — the version, and when you accepted it. It is recorded
+          once, at the first sign-in, so that an acceptance can be shown rather than assumed.
         </li>
         <li>
-          <strong>Plan and subscription</strong> — which plan the account is on, how many seats, and the
-          store's identifiers for the subscription. Not your card.
+          <strong>Plan and subscription</strong> — the plan, the seats, the store's identifiers for the
+          subscription, and its state. Not your card.
         </li>
         <li>
           <strong>A business verification, if you file one</strong> — the business details you typed, the
-          documents you uploaded, and the version of the terms you accepted.
+          documents you uploaded (business registration, domain ownership, anything additional you attach),
+          the decision and its reason.
+        </li>
+        <li>
+          <strong>Support conversations</strong> — what you send us when you ask for help, which we keep
+          for as long as the request needs.
         </li>
       </ul>
-
-      <h2>3. What you share is stored, and for whom</h2>
       <p>
-        A collection you share is uploaded so the people you shared it with can open it, together with the
-        name and description you gave it. A private share is readable by the people you named, and a share
-        to the Community is readable by anyone with the link and appears in the directory.
-      </p>
-      <p>
-        Unsharing deletes the stored copy shortly after. A revoked business verification hides the
-        Community shares of that account and deletes them 30 days later, unless it is restored first.
-        Deleting your account removes everything of yours that our servers hold.
+        Our servers also write ordinary logs while they serve a request: an IP address, a timestamp, the
+        function called and whether it failed. They are kept by our host for days rather than months.
       </p>
 
-      <h2>4. Payments</h2>
+      <h2>5. AI features</h2>
       <p>
-        Payments are taken by <strong>Creem</strong>, which is the merchant of record. The card, the billing
-        address and the invoice live in Creem's systems under its own privacy policy, and the tax it
-        collects is handled there. We keep the subscription's identifier, its state and the plan it
-        carries — what the application needs to know which plan is active.
+        The AI assistant works with an API key <strong>you</strong> supply, for OpenAI, Anthropic or an
+        OpenAI-compatible endpoint of your choosing. The key is stored on your machine, and the request
+        carrying your question goes from your machine straight to that provider — not through us.
       </p>
-
-      <h2>5. Who processes data for us</h2>
       <ul>
-        <li><strong>Supabase</strong> — accounts, the database and the storage that holds shared collections.</li>
-        <li><strong>Creem</strong> — checkout, payments, invoices and tax.</li>
-        <li><strong>GitHub</strong> — the static pages you are reading now, which carry no scripts and no analytics.</li>
-        <li>The <strong>sign-in provider</strong> you chose, and only for the sign-in itself.</li>
+        <li>We never receive your prompts, the code sent with them, or the answers.</li>
+        <li>
+          Before a question is sent, response bodies are reduced to their shape — keys and value types,
+          with the values removed — so the model sees the structure of a response and not its contents.
+        </li>
+        <li>
+          What that provider does with the request is governed by your agreement with it. Read its policy;
+          the choice of endpoint is yours and so is the data that reaches it.
+        </li>
+        <li>Removing the key in preferences stops the feature; nothing of it is left on our side.</li>
       </ul>
 
-      <h2>6. What we do not do</h2>
-      <ul>
-        <li>We do not sell or rent data, and there is no advertising network anywhere in the product.</li>
-        <li>We do not track the API traffic you generate.</li>
-        <li>We do not read your collections for any purpose other than hosting what you published, and reviewing a business verification you filed.</li>
-      </ul>
+      <h2>6. The anonymous usage count</h2>
+      <p>
+        When the build you are using is configured to send it, the app reports <strong>once a day</strong>
+        that it was opened, to PostHog. The report carries the operating system, the app version, and a
+        random identifier generated on your machine; it carries no account, no email, no content, and it
+        cannot be tied back to you. There is no advertising network, no session recording and no
+        crash-reporting service anywhere in the product.
+      </p>
+      <p>
+        There is no switch for this in the app today. If you need it off, write to us and we will tell you
+        what your build does, and how to run one that sends nothing.
+      </p>
 
-      <h2>7. Security</h2>
+      <h2>7. Payments</h2>
+      <p>
+        Payments are taken by <strong>Creem</strong>, which is the merchant of record. The card, the
+        billing address and the invoice live in Creem's systems under its own privacy policy, and the tax
+        it collects is handled there. We keep the subscription's identifier, its state, the plan and the
+        seat count — and an archive of the identifiers of a subscription that has ended, so that a
+        cancelled plan is not granted again by a late message from the store.
+      </p>
+
+      <h2>8. Who processes data for us</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>What it holds</th>
+            <th>Where</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Supabase</td>
+            <td>accounts, the database, synchronised workspaces, shared collections, verification documents</td>
+            <td>Japan (Tokyo)</td>
+          </tr>
+          <tr>
+            <td>Creem</td>
+            <td>checkout, payments, invoices, tax</td>
+            <td>as its policy states</td>
+          </tr>
+          <tr>
+            <td>GitHub</td>
+            <td>the static pages you are reading, which carry no scripts and no cookies</td>
+            <td>United States</td>
+          </tr>
+          <tr>
+            <td>PostHog</td>
+            <td>the anonymous daily count in section 6</td>
+            <td>United States</td>
+          </tr>
+          <tr>
+            <td>Your sign-in provider</td>
+            <td>the sign-in itself, and only that</td>
+            <td>as its policy states</td>
+          </tr>
+          <tr>
+            <td>The AI provider you choose</td>
+            <td>only what you ask it, sent by you with your key</td>
+            <td>as its policy states</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        Because those services sit in several countries, your data may be transferred outside the country
+        you live in. Where the law requires it, the transfer rests on the standard contractual clauses of
+        the provider concerned, and on the fact that it is necessary to perform our agreement with you.
+      </p>
+      <p>
+        We do not sell your data, and we do not share it for advertising. A new processor is announced at
+        least 30 days before it starts handling anything, at the email address on the account.
+      </p>
+
+      <h2>9. Why we are allowed to hold it</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>What</th>
+            <th>Basis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>The account, the synchronised workspace, shares, a subscription</td>
+            <td>performing the agreement with you</td>
+          </tr>
+          <tr>
+            <td>Keeping the service secure, stopping abuse, investigating a report</td>
+            <td>our legitimate interest in a service that works and is not used to harm people</td>
+          </tr>
+          <tr>
+            <td>Invoices, tax records, an account that has ended</td>
+            <td>a legal obligation we are under</td>
+          </tr>
+          <tr>
+            <td>The anonymous count in section 6</td>
+            <td>our legitimate interest in knowing the product is used, on data that identifies nobody</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>10. How long it is kept</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>What</th>
+            <th>How long</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>The account, its workspace and its shares</td><td>until you delete the account</td></tr>
+          <tr>
+            <td>Verification documents</td>
+            <td>90 days after the decision on the request, then the record and the files are removed</td>
+          </tr>
+          <tr>
+            <td>A Community share hidden by a revoked verification</td>
+            <td>30 days, unless the verification is restored</td>
+          </tr>
+          <tr>
+            <td>Payment and tax records</td>
+            <td>for the period the accounting and tax law requires, and no longer</td>
+          </tr>
+          <tr>
+            <td>Server logs</td>
+            <td>a few days, in the hands of our host</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        Deleting the account removes what is yours — the account, the synchronised workspace and the
+        shares. Two things can outlive it: a record we must keep for tax or accounting, and what is needed
+        to show a subscription ended. An anonymised backup copy can also take a short while to age out.
+      </p>
+
+      <h2>11. Security</h2>
       <p>
         Accounts and shares are guarded by row-level rules: a share is served only to the account that
-        owns it and to the people it was shared with, and a business document is readable only by the desk
-        reviewing it. Locally, the security of your data is the security of your machine — keep it patched
-        and keep the app's own store out of folders you sync publicly.
+        owns it and to the people it was shared with, a synchronised record only to the account it belongs
+        to, and a verification document only to the desk reviewing it — from a bucket that is not public.
+        Secrets are filtered out of synchronisation and publication rather than merely hidden.
+      </p>
+      <p>
+        No one here reads your synchronised workspace or your shares as a matter of course. We look at
+        them only when you ask us to, when a report of abuse or infringement needs an answer, or when the
+        law requires it.
+      </p>
+      <p>
+        Locally, the security of your data is the security of your machine: keep it patched, and keep the
+        app's store out of folders you sync publicly. If a breach ever affects your data, we tell you
+        without undue delay, and the authorities where the law requires it.
       </p>
 
-      <h2>8. How long things are kept</h2>
+      <h2>12. Your rights</h2>
+      <p>Wherever you live, you can ask us to:</p>
       <ul>
-        <li>The account, until you delete it.</li>
-        <li>A shared collection, until you unshare it or delete the account.</li>
-        <li>
-          Business verification documents, 90 days after a decision on the request — then the row and the
-          uploaded files are removed. Deleting the account removes them sooner.
-        </li>
-        <li>A hidden Community share, 30 days after the verification was revoked, unless it is restored.</li>
+        <li>show you what we hold about you, and give you a copy in a portable form;</li>
+        <li>correct what is wrong — much of it is yours to edit in the app;</li>
+        <li>delete it, either from the app or by asking us;</li>
+        <li>restrict or object to a use that rests on our legitimate interest;</li>
+        <li>withdraw a consent you gave, without it affecting what happened before.</li>
       </ul>
-
-      <h2>9. Your choices</h2>
       <p>
-        You can see and change your profile in the app, unshare anything you published, and delete the
-        whole account from the account settings — which removes the account and what our servers hold for
-        it, and cancels the subscription. To ask for a copy of what we hold, or to correct something the
-        app will not let you change,
-        <a href="https://github.com/accessflows/releases/issues">open an issue on the AccessFlows
-        repository</a>.
+        Write to <a href="mailto:legal@accessflows.com">legal@accessflows.com</a> and we answer within 30
+        days. If you are not satisfied with the answer, you may complain to the data protection authority
+        where you live — in Vietnam, the authority that oversees information security.
+      </p>
+      <p>
+        Nothing here gives you a right over data we never received: your responses, your history, your
+        secrets and your AI key are on your machine, and deleting them is something only you can do.
       </p>
 
-      <h2>10. Children</h2>
+      <h2>13. Automated decisions</h2>
       <p>
-        The application is a tool for building and testing APIs and is not directed at children. An account
-        is for someone old enough to enter into a contract where they live.
+        A business verification is decided by a person, not by software. Nothing else about your account
+        is decided automatically in a way that has a legal or similarly significant effect on you.
       </p>
 
-      <h2>11. Changes to this policy</h2>
+      <h2>14. Children</h2>
       <p>
-        When this policy changes, the date at the top changes with it. A change that widens what we collect
-        is announced in the application before it takes effect.
+        The application is a tool for building and testing APIs and is not directed at children. An
+        account is for someone at least 13 years old, and 16 where local law sets that age for online
+        services. If we learn that an account belongs to someone younger, we close it.
+      </p>
+
+      <h2>15. Cookies</h2>
+      <p>
+        The pages you are reading set no cookies at all. The application keeps your session and its
+        settings in its own store on your machine rather than in browser cookies, and the web build uses
+        local storage for the same purpose.
+      </p>
+
+      <h2>16. Changes to this policy</h2>
+      <p>
+        When this policy changes, the version and the date at the top change with it. A change that widens
+        what we collect, or who processes it, is announced at least 30 days before it takes effect, at the
+        email address on the account.
       </p>
 
       <div class="note">
-        One thing worth saying plainly: the copy of your collections on your machine is yours and is never
-        uploaded unless you share it. If you lose that machine, we cannot restore it for you.
+        One thing worth saying plainly: the copy of your collections on your machine is yours. If you lose
+        that machine, we cannot restore what was never synchronised — responses, history, secrets and files.
       </div>
 
       <footer>
-        See also the <a href="./terms.html">Terms of Service</a>.
+        See also the <a href="./terms.html">Terms of Service</a>. This page is
+        <code>Version 2026-11.2</code>.
       </footer>
     </main>
   </body>
