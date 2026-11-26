@@ -156,6 +156,20 @@
         margin-bottom: 0;
       }
 
+      dl.terms {
+        margin: 0 0 14px;
+      }
+
+      dl.terms dt {
+        margin: 14px 0 2px;
+        font-weight: 600;
+      }
+
+      dl.terms dd {
+        margin: 0;
+        color: var(--text);
+      }
+
       footer {
         margin-top: 36px;
         padding-top: 18px;
@@ -169,7 +183,7 @@
     <main>
       <p class="brand">AccessFlows</p>
       <h1>Terms of Service</h1>
-      <p class="meta">Version 2026-11.3 · Last updated 26 November 2026</p>
+      <p class="meta">Version 2026-11.4 · Effective 26 November 2026</p>
 
       <p class="lede">
         These terms are the agreement between you and AccessFlows for your account and for the services
@@ -202,11 +216,88 @@
         <li>the paid plans and everything about paying for them.</li>
       </ul>
       <p>
-        The MIT licence and these terms do different jobs. Where they disagree about the software, the
-        MIT licence wins. Where they disagree about an account, a share or a payment, these terms do.
+        The <a href="./privacy.html">Privacy Policy</a> and the acceptable-use rules in section 13 are
+        part of these terms. The MIT licence and these terms do different jobs: where they disagree
+        about the software, the MIT licence wins; where they disagree about an account, a share or a
+        payment, these terms do.
       </p>
 
-      <h2>2. Your account</h2>
+      <h2>2. What the words mean</h2>
+      <p>These words carry the same meaning wherever they appear below.</p>
+      <dl class="terms">
+        <dt>Service</dt>
+        <dd>
+          Everything we run for you: the account, the synchronisation, sharing, the Community
+          directory, billing, and anything else reached through the application that needs a server.
+          The application on your computer is not the Service; it is software you have under the MIT
+          licence.
+        </dd>
+
+        <dt>Account</dt>
+        <dd>
+          The identity you sign in with, holding your email address, your plan and your profiles. One
+          person holds one account.
+        </dd>
+
+        <dt>Profile</dt>
+        <dd>
+          A workspace inside your account that content belongs to. A personal profile carries your own
+          plan; a company profile carries the plan of the organisation it belongs to.
+        </dd>
+
+        <dt>Seat</dt>
+        <dd>
+          One person's place on an Organisation plan. A seat is bought for a named person and belongs
+          to them; it is not a pool of logins.
+        </dd>
+
+        <dt>Plan</dt>
+        <dd>
+          Starter (free), Pro (one person) or Organisation (sold by the seat). What each one carries is
+          in section 4.
+        </dd>
+
+        <dt>Allowance</dt>
+        <dd>
+          The limits a plan carries: how many collections may be published to the Community, and how
+          large one shared collection may be. Section 12 says what happens when an account goes over.
+        </dd>
+
+        <dt>Your Content</dt>
+        <dd>
+          The collections, requests, environments, scripts and other material you create in the
+          application or synchronise to your account. It does not include the software, our
+          documentation, or material another person published.
+        </dd>
+
+        <dt>Share</dt>
+        <dd>
+          A collection you publish to our servers so somebody else can open it. A
+          <strong>private share</strong> is addressed to the people you name; a
+          <strong>Community share</strong> is published to the Community directory, where anyone with
+          the link can open it. Section 7 says what each one lets other people do.
+        </dd>
+
+        <dt>Pull</dt>
+        <dd>
+          Taking a copy of a shared collection into your own workspace, as a new collection you own and
+          can edit. It is what the application's "add to my collections" action does.
+        </dd>
+
+        <dt>Notice</dt>
+        <dd>
+          A message we send about your account — a price change, a new version of these terms, a new
+          processor, a security matter. Section 21 says how it reaches you.
+        </dd>
+
+        <dt>Business account</dt>
+        <dd>
+          An account that has been verified as belonging to a business, which is what opens Community
+          sharing. Section 11 describes the verification.
+        </dd>
+      </dl>
+
+      <h2>3. Your account</h2>
       <p>
         You need an account to synchronise a workspace, share a collection or buy a plan. You can sign in
         with an email address and password, or with Google, GitHub or Microsoft.
@@ -215,8 +306,14 @@
         <li>Give us an email address you actually control — it is how a password is reset and how we reach you.</li>
         <li>Keep your password to yourself. Anything done through your account is treated as done by you.</li>
         <li>
-          One person per account. A member account under an Organisation plan belongs to one named
-          person, and that seat is what is charged.
+          <strong>A person creates and holds the account.</strong> An account may not be registered or
+          run by a bot or other automated means, and a company buys seats for named people rather than
+          one login shared among them.
+        </li>
+        <li>
+          <strong>One person per account, and one person per seat.</strong> Do not let two people use
+          the same credentials, and do not arrange time-sharing or anything else that gives more people
+          access than the seats bought.
         </li>
         <li>
           You must be at least 13 years old, and old enough to enter into a contract where you live —
@@ -226,10 +323,10 @@
       </ul>
       <p>
         Tell us if you believe someone else has got into your account. You can delete the account
-        yourself from the app at any time — see section 9.
+        yourself from the app at any time — see section 14.
       </p>
 
-      <h2>3. Plans, prices and payment</h2>
+      <h2>4. Plans, prices and payment</h2>
       <p>
         There is a free plan and two paid ones. Prices are in US dollars and exclude any tax Creem adds
         at checkout.
@@ -273,8 +370,8 @@
       <p>
         <strong>An Organisation plan is sold to a team.</strong> It starts at two seats, and the quantity
         may not be reduced below two — or below what a subscription bought earlier still pays for. The
-        business that buys the seats is responsible for its members' use of them, and for the content
-        those members publish.
+        business that buys the seats is responsible for its members' use of them, for keeping the named
+        people current, and for the content those members publish.
       </p>
       <p>
         <strong>Creem is the merchant of record.</strong> Payments are taken by Creem, not by us. Creem
@@ -290,8 +387,18 @@
       </p>
       <p>
         If we change a price, we tell you at least <strong>30 days before</strong> the renewal it would
-        apply to, at the email address on the account. You may cancel before that renewal and pay
-        nothing more; if you do not cancel, the new price applies from it.
+        apply to, by Notice. You may cancel before that renewal and pay nothing more; if you do not
+        cancel, the new price applies from it.
+      </p>
+
+      <h3>When a payment does not go through</h3>
+      <p>
+        Creem retries a failed payment for a while, and the subscription stays paused-but-paid for in
+        that window. If it is still unpaid when the retries end, the paid plan ends and the account
+        goes back to Starter: the workspace stays, collections stay on your machine, and whatever the
+        plan gave you beyond Starter stops applying. If the account was over the Starter allowance at
+        that moment, the twelve months in section 12 start then — so a plan that lapses is a plan that
+        can eventually cost you a Community listing, not your work.
       </p>
 
       <h3>Offers and discount codes</h3>
@@ -303,11 +410,11 @@
       </p>
       <p>
         A discount given to a checkout is not applied again when an existing subscription moves to
-        another plan: an upgrade is charged at the price on the subscription, prorated as section 4
+        another plan: an upgrade is charged at the price on the subscription, prorated as section 5
         describes.
       </p>
 
-      <h2>4. Changing or ending a plan</h2>
+      <h2>5. Changing or ending a plan</h2>
       <ul>
         <li>
           <strong>Moving up</strong> is immediate: the plan changes on the subscription you already
@@ -349,12 +456,12 @@
         the payment method Creem used, within 14 days of your notice.
       </p>
       <p>
-        A refund beyond what this section and section 13 require is Creem's decision as merchant of
+        A refund beyond what this section and section 18 require is Creem's decision as merchant of
         record, not something the app can issue. If something was charged that should not have been,
         write to us and we will help sort it out.
       </p>
 
-      <h2>5. What stays on your machine, and what is synchronised</h2>
+      <h2>6. What stays on your machine, and what is synchronised</h2>
       <p>
         Responses, request history, your secrets, certificates and the files you keep in a collection
         stay on your computer, in the application's own store. We do not run a proxy in the middle of
@@ -371,24 +478,45 @@
         backup suits you.
       </p>
 
-      <h2>6. What you share</h2>
+      <h2>7. What you share, and what sharing lets other people do</h2>
       <p>
-        A shared collection is stored on our servers so that the people you shared it with can open it.
-        What you publish is what leaves your machine: check it before you share it. A collection whose
+        A shared collection is stored on our servers so the people you shared it with can open it. What
+        you publish is what leaves your machine: check it before you share it. A collection whose
         environments carry secret values cannot be published until they are removed.
       </p>
+      <p><strong>Sharing grants more than a look, and this is the part to read twice.</strong></p>
       <ul>
         <li>
-          You keep ownership of your content. You give us a non-exclusive, worldwide, royalty-free
-          licence to store it, copy it and serve it to the people you shared it with — for as long as it
-          is shared, and no longer. It ends when you unshare, except for backups and the copies a
-          recipient already has.
+          A collection you share can be <strong>pulled</strong> into the workspace of anybody who can
+          open it — as a new collection they own and can edit, run and share on. That is what the
+          application's "add to my collections" action does, and it is the point of a directory.
         </li>
-        <li>Do not share what is not yours to share, and do not publish secrets, tokens or personal data of other people.</li>
+        <li>
+          A <strong>private share</strong> grants that to the people you named. A
+          <strong>Community share</strong> grants it to anyone who can reach the link, and the
+          collection is public: it may be indexed by search engines and copied by whoever sees it.
+        </li>
+        <li>
+          By sharing, you give us a non-exclusive, worldwide, royalty-free licence to store, copy and
+          serve that collection to the people above — for as long as it is shared, and no longer. It
+          ends when you unshare, except for backups and the copies a recipient already pulled.
+        </li>
+        <li>
+          You keep ownership of what you wrote. A person who pulls your collection becomes the owner of
+          their copy and may change it; the collection they hold is theirs, and the source it came from
+          stays readable in its history.
+        </li>
+        <li>
+          You confirm you have the right to publish what you share, and that it contains no secrets and
+          no personal data of other people. Do not share what is not yours to share.
+        </li>
         <li>You can unshare at any time; the link stops working, and the stored copy is deleted shortly after.</li>
       </ul>
+      <p>
+        If you believe a shared collection should not be there, section 8 says how to have it reviewed.
+      </p>
 
-      <h3>Content that infringes, and how to report it</h3>
+      <h2>8. Content that infringes, and how to report it</h2>
       <p>
         If something published through AccessFlows infringes your copyright or another right, or is
         unlawful, write to <a href="mailto:legal@accessflows.com">legal@accessflows.com</a> with: what
@@ -399,13 +527,72 @@
       </p>
       <p>
         We hide or remove content that a valid notice identifies, and we tell the account that published
-        it so that it can answer. An account that keeps publishing infringing or unlawful content loses
-        Community sharing, and an account that keeps at it loses its account. If you believe something
-        of yours was removed by mistake, write to the same address with the link and your reasons, and we
-        restore it where the answer holds up.
+        it so that it can answer. We may also remove content we judge, reasonably, to break these terms
+        or the law, or to expose somebody's secrets. An account that keeps publishing infringing or
+        unlawful content loses Community sharing, and an account that keeps at it loses its account.
+      </p>
+      <p>
+        If you believe something of yours was removed by mistake, write to the same address with the link
+        and your reasons, and we restore it where the answer holds up.
       </p>
 
-      <h2>7. Community sharing and business accounts</h2>
+      <h2>9. Data that must not go into the service</h2>
+      <p>
+        The Service is built for API development material. It is not built for, and you must not
+        synchronise or share through it:
+      </p>
+      <ul>
+        <li>
+          health or medical records, or anything else protected as health information — including
+          patient data;
+        </li>
+        <li>payment card numbers or other card data subject to the card-industry standards;</li>
+        <li>
+          government identifiers of other people — social security, national identity, passport,
+          driver's licence numbers;
+        </li>
+        <li>
+          another person's financial account data, or any other category of personal data that local law
+          protects more strictly than ordinary personal data;
+        </li>
+        <li>credentials, keys or tokens — a shared collection that carries secrets in its environments is refused.</li>
+      </ul>
+      <p>
+        Environment values marked as secret are never synchronised, which is the safe place for a
+        credential. If you are not sure whether something belongs in the Service, leave it on your
+        machine: everything works locally.
+      </p>
+      <p>
+        You are responsible for having a lawful basis for any personal data you do put in, and for the
+        notices the people concerned are entitled to. We may remove content that breaks this section.
+      </p>
+
+      <h2>10. AI features</h2>
+      <p>
+        The AI assistant works with an API key <strong>you</strong> supply, for OpenAI, Anthropic or an
+        OpenAI-compatible endpoint you choose. The key stays on your machine, and the request goes from
+        your machine to that provider — not through us.
+      </p>
+      <ul>
+        <li>
+          Your use of that provider is governed by your agreement with it, including what it does with
+          what you send. We are not a party to it and cannot answer for it.
+        </li>
+        <li>
+          Before a question is sent, response bodies are reduced to their shape — keys and value types,
+          with the values removed. Do not paste secrets or the data in section 9 into a prompt.
+        </li>
+        <li>
+          Output is generated, not written by us, and may be wrong, incomplete, or the same for somebody
+          else asking something similar. Check it before you rely on it.
+        </li>
+        <li>
+          The feature is optional. Removing the key in preferences stops it, and nothing about it is
+          stored on our side.
+        </li>
+      </ul>
+
+      <h2>11. Community sharing and business accounts</h2>
       <p>
         The Community directory is for content a business is willing to publish. Sharing there needs a
         verified business account: you send details of the business, an administrator reviews them, and
@@ -422,9 +609,9 @@
         hidden at once, and deleted 30 days later unless the verification is restored.
       </p>
 
-      <h2>8. Allowances, and what happens when you exceed them</h2>
+      <h2>12. Allowances, and what happens when you exceed them</h2>
       <p>
-        Each plan carries an allowance: how many collections you may publish, and how large a share may
+        Each plan carries an Allowance: how many collections you may publish, and how large a share may
         be. The app shows where you stand against it.
       </p>
       <p>
@@ -436,26 +623,7 @@
         covers them, ends the clock at any point.
       </p>
 
-      <h2>9. Ending an account</h2>
-      <p>
-        You can delete your account from the app at any time. Deleting it cancels the subscription, and
-        the account and the content you shared to our servers are removed. Collections on your own
-        machine are yours and are not touched by it.
-      </p>
-      <p>We may suspend or close an account that:</p>
-      <ul>
-        <li>breaks these terms;</li>
-        <li>is used to publish content that is unlawful, or that infringes someone else's rights;</li>
-        <li>is used to attack the service — probing it, evading its limits, or using it to distribute malware.</li>
-      </ul>
-      <p>
-        Where it is reasonable to do so, we will tell you why and give you a chance to put it right. A
-        suspension because an account broke these terms ends it without a refund of the period running;
-        if we suspend or close an account for any other reason, we refund the unused part of the period
-        paid for.
-      </p>
-
-      <h2>10. Acceptable use</h2>
+      <h2>13. Acceptable use</h2>
       <p>Do not use an account or a share to:</p>
       <ul>
         <li>publish content that is illegal where you or the reader is, or that you have no right to publish;</li>
@@ -469,15 +637,52 @@
           address, identity documents, health or financial details — without permission;
         </li>
         <li>impersonate someone else, or misrepresent which business you speak for;</li>
+        <li>
+          share credentials, or arrange access so that more people use the Service than the seats or
+          accounts bought — including by time-sharing, or by pooling one login;
+        </li>
+        <li>
+          scrape or copy other people's content automatically, or use the Service to build a competing
+          directory;
+        </li>
         <li>work around an allowance, a quota or a rate limit, or put a load on the service that it is not meant to carry.</li>
       </ul>
       <p>
         Using the application and the services must also comply with the export control and sanctions
-        rules that apply to you: an account may not be used from a country, or by a person, those rules
-        prohibit.
+        rules that apply to you. You confirm you are not located in, or acting on behalf of anybody in, a
+        country those rules prohibit, and that you will not use the Service for a prohibited end use. An
+        account may not be used from a country, or by a person, those rules prohibit.
       </p>
 
-      <h2>11. Availability, and changes to the service</h2>
+      <h2>14. Ending an account</h2>
+      <p>
+        You can delete your account from the app at any time. Deleting it cancels the subscription, and
+        the account and the content you shared to our servers are removed. Collections on your own
+        machine are yours and are not touched by it.
+      </p>
+      <p>We may suspend or close an account that:</p>
+      <ul>
+        <li>breaks these terms;</li>
+        <li>is used to publish content that is unlawful, or that infringes someone else's rights;</li>
+        <li>is used to send data in section 9 through the Service;</li>
+        <li>is used to attack the service — probing it, evading its limits, or using it to distribute malware.</li>
+      </ul>
+      <p>
+        Where it is reasonable to do so, we will tell you why and give you a chance to put it right. A
+        suspension because an account broke these terms ends it without a refund of the period running;
+        if we suspend or close an account for any other reason, we refund the unused part of the period
+        paid for.
+      </p>
+
+      <h2>15. Beta and preview features</h2>
+      <p>
+        Some features are marked beta, preview or early access. They are offered to be tried, not
+        promised: they may change, break or be withdrawn at any time, they are given as they are, and the
+        disclaimers and liability limits in sections 17 and 18 apply to them in full. Do not build
+        something you cannot afford to lose on a beta feature alone.
+      </p>
+
+      <h2>16. Availability, and changes to the service</h2>
       <p>
         The application is local-first: it works without us, and it keeps working if our servers do not.
         The parts that need a server — signing in, synchronising, sharing, the Community, billing —
@@ -490,7 +695,7 @@
         days' notice and the same refund — and the application keeps working on your machine.
       </p>
 
-      <h2>12. Disclaimers</h2>
+      <h2>17. Disclaimers</h2>
       <p>
         The software and the services are provided <strong>as they are</strong>, without warranties of
         any kind beyond those the law does not let us exclude. We do not promise that the service will be
@@ -501,12 +706,12 @@
         them.
       </p>
 
-      <h2>13. Liability</h2>
+      <h2>18. Liability</h2>
       <p>
         To the extent the law allows, we are not liable for indirect or consequential loss, for lost
-        profit or lost data, or for what a third-party API you called does with your request. Our total
-        liability for a claim about the paid service is limited to what you paid for it in the twelve
-        months before the claim.
+        profit or lost data, or for what a third-party API you called, an AI provider you chose, or a
+        person who pulled your collection does with your material. Our total liability for a claim about
+        the paid service is limited to what you paid for it in the twelve months before the claim.
       </p>
       <p>
         <strong>Nothing in these terms limits or excludes liability</strong> for death or personal injury
@@ -515,7 +720,7 @@
         above apply only so far as your local law permits them.
       </p>
 
-      <h2>14. Governing law and disputes</h2>
+      <h2>19. Governing law and disputes</h2>
       <p>
         These terms are governed by the laws of <strong>Vietnam</strong>, and the courts of Ho Chi Minh
         City have jurisdiction over a dispute about them.
@@ -526,18 +731,23 @@
         own courts; and before going to court, write to us. Most things are settled in a message.
       </p>
 
-      <h2>15. Changes to these terms</h2>
+      <h2>20. Changes to these terms</h2>
       <p>
-        These terms carry a version, and the account records the version it accepted. When the text
-        changes, the version changes with it, and the version that applied before stays readable. A
-        change that affects what you pay, what you may do, or how a dispute is settled is announced at
-        least 30 days before it takes effect, at the email address on the account; if you do not accept
-        it, you may cancel before it applies. Continuing to use the account after that date means you
-        accept the new text.
+        These terms carry a version and an effective date, and the account records the version it
+        accepted. When the text changes, the version and the date change with it, and the text that
+        applied before stays readable. A change that affects what you pay, what you may do, or how a
+        dispute is settled is announced at least 30 days before it takes effect, by Notice; if you do not
+        accept it, you may cancel before it applies. Continuing to use the account after that date means
+        you accept the new text.
       </p>
 
-      <h2>16. General</h2>
+      <h2>21. Notices, and the rest of the fine print</h2>
       <ul>
+        <li>
+          <strong>Notices.</strong> We write to the email address on the account, and keeping it current
+          is your job. Service notices are sent from <strong>no-reply@accessflows.com</strong>, and a
+          reply to one reaches <a href="mailto:support@accessflows.com">support@accessflows.com</a>.
+        </li>
         <li>
           <strong>Entire agreement.</strong> These terms, the Privacy Policy and the MIT licence of the
           software are the whole agreement between us, and replace anything said before them.
@@ -557,16 +767,11 @@
         </li>
         <li>
           <strong>Force majeure.</strong> Neither of us is liable for a delay caused by something outside
-          our control, though a paid suspension still gives the refund in section 9.
+          our control, though a paid suspension still gives the refund in section 14.
         </li>
         <li>
           <strong>Survival.</strong> The sections about content ownership, disclaimers, liability,
           governing law and the general terms here continue after the account ends.
-        </li>
-        <li>
-          <strong>Notices.</strong> We write to the email address on the account, and keeping it current
-          is your job. Service notices are sent from <strong>no-reply@accessflows.com</strong>, and a
-          reply to one reaches <a href="mailto:support@accessflows.com">support@accessflows.com</a>.
         </li>
         <li>
           <strong>Language.</strong> These terms are written in English, and the English text governs. A
@@ -577,7 +782,7 @@
         </li>
       </ul>
 
-      <h2>17. Contact</h2>
+      <h2>22. Contact</h2>
       <p>
         An account, a payment, a cancellation, or anything about how the service works:
         <a href="mailto:support@accessflows.com">support@accessflows.com</a>.
@@ -593,9 +798,10 @@
 
       <footer>
         See also the <a href="./privacy.html">Privacy Policy</a>. This page is
-        <code>Version 2026-11.3</code>: the account records the version it accepted, and earlier texts
-        are kept at <a href="./terms-2026-11-2.html">version 2026-11.2</a> and
-        <a href="./terms-2026-11.html">version 2026-11</a>.
+        <code>Version 2026-11.4</code>, effective 26 November 2026: the account records the version it
+        accepted, and earlier texts are kept at <a href="./terms-2026-11-3.html">2026-11.3</a>,
+        <a href="./terms-2026-11-2.html">2026-11.2</a> and
+        <a href="./terms-2026-11.html">2026-11</a>.
       </footer>
     </main>
   </body>

@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="referrer" content="no-referrer" />
+    <title>Terms of Service, version 2026-11.3 (superseded) — AccessFlows</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #f8fafc;
+        --card: #ffffff;
+        --text: #0f172a;
+        --muted: #64748b;
+        --border: #e2e8f0;
+        --brand: #2563eb;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0b1220;
+          --card: #111a2b;
+          --text: #f1f5f9;
+          --muted: #94a3b8;
+          --border: #1e293b;
+          --brand: #60a5fa;
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 40px 24px 64px;
+        background: var(--bg);
+        color: var(--text);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-size: 15px;
+        line-height: 1.65;
+      }
+
+      main {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 40px 36px 44px;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: var(--card);
+        box-shadow: 0 18px 44px rgba(15, 23, 42, 0.08);
+      }
+
+      .brand {
+        margin: 0 0 6px;
+        color: var(--brand);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: 30px;
+        line-height: 1.2;
+      }
+
+      .meta {
+        margin: 0 0 8px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .lede {
+        margin: 18px 0 0;
+        padding-top: 18px;
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+      }
+
+      h2 {
+        margin: 34px 0 10px;
+        font-size: 18px;
+        line-height: 1.3;
+      }
+
+      h3 {
+        margin: 22px 0 8px;
+        font-size: 15px;
+      }
+
+      p {
+        margin: 0 0 12px;
+      }
+
+      ul {
+        margin: 0 0 12px;
+        padding-left: 22px;
+      }
+
+      li {
+        margin-bottom: 6px;
+      }
+
+      strong {
+        font-weight: 600;
+      }
+
+      a {
+        color: var(--brand);
+      }
+
+      table {
+        width: 100%;
+        margin: 0 0 14px;
+        border-collapse: collapse;
+        font-size: 14px;
+      }
+
+      th,
+      td {
+        padding: 8px 10px;
+        border-bottom: 1px solid var(--border);
+        text-align: left;
+        vertical-align: top;
+      }
+
+      th {
+        color: var(--muted);
+        font-weight: 600;
+      }
+
+      .note {
+        margin: 18px 0;
+        padding: 12px 14px;
+        border-left: 3px solid var(--brand);
+        border-radius: 8px;
+        background: color-mix(in srgb, var(--brand) 8%, transparent);
+        font-size: 14px;
+      }
+
+      .who {
+        margin: 18px 0 0;
+        padding: 14px 16px;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        font-size: 14px;
+      }
+
+      .who p {
+        margin: 0 0 6px;
+      }
+
+      .who p:last-child {
+        margin-bottom: 0;
+      }
+
+      footer {
+        margin-top: 36px;
+        padding-top: 18px;
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="brand">AccessFlows</p>
+      <h1>Terms of Service</h1>
+      <p class="meta">Version 2026-11.3 · superseded by <a href="./terms.html">version 2026-11.4</a></p>
+
+      <p class="lede">
+        These terms are the agreement between you and AccessFlows for your account and for the services
+        that run behind it. Read them before you create an account — creating one, or continuing with
+        Google, GitHub or Microsoft, means you accept them.
+      </p>
+
+      <div class="who">
+        <p><strong>Who you are contracting with</strong></p>
+        <p>AccessFlows Co., Ltd. — 36 Trịnh Đình Thảo, phường Tân Phú, Ho Chi Minh City, Vietnam.</p>
+        <p>
+          Notices and complaints: <a href="mailto:legal@accessflows.com">legal@accessflows.com</a>.
+          Ordinary questions about an account or a payment:
+          <a href="mailto:support@accessflows.com">support@accessflows.com</a>. Both reach a person;
+          the <a href="https://github.com/accessflows/releases/issues">public issue tracker</a> is there
+          for anything that is not private.
+        </p>
+      </div>
+
+      <h2>1. What these terms cover</h2>
+      <p>
+        AccessFlows is an API development application that runs on your computer. Its source code is
+        released under the MIT licence, so the software itself is yours to use, change and share under
+        that licence.
+      </p>
+      <p>These terms cover the parts that are ours to run:</p>
+      <ul>
+        <li>the account you sign in with;</li>
+        <li>the synchronisation of a workspace, and sharing — private shares and the Community directory;</li>
+        <li>the paid plans and everything about paying for them.</li>
+      </ul>
+      <p>
+        The MIT licence and these terms do different jobs. Where they disagree about the software, the
+        MIT licence wins. Where they disagree about an account, a share or a payment, these terms do.
+      </p>
+
+      <h2>2. Your account</h2>
+      <p>
+        You need an account to synchronise a workspace, share a collection or buy a plan. You can sign in
+        with an email address and password, or with Google, GitHub or Microsoft.
+      </p>
+      <ul>
+        <li>Give us an email address you actually control — it is how a password is reset and how we reach you.</li>
+        <li>Keep your password to yourself. Anything done through your account is treated as done by you.</li>
+        <li>
+          One person per account. A member account under an Organisation plan belongs to one named
+          person, and that seat is what is charged.
+        </li>
+        <li>
+          You must be at least 13 years old, and old enough to enter into a contract where you live —
+          16 where your local law sets that age for online services.
+        </li>
+        <li>If you are agreeing on behalf of a company, you confirm you may do so.</li>
+      </ul>
+      <p>
+        Tell us if you believe someone else has got into your account. You can delete the account
+        yourself from the app at any time — see section 9.
+      </p>
+
+      <h2>3. Plans, prices and payment</h2>
+      <p>
+        There is a free plan and two paid ones. Prices are in US dollars and exclude any tax Creem adds
+        at checkout.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Plan</th>
+            <th>Price</th>
+            <th>What it carries</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Starter</td>
+            <td>Free</td>
+            <td>
+              Unlimited local collections and private shares, 5 MB per share, and up to three
+              collections in the Community directory.
+            </td>
+          </tr>
+          <tr>
+            <td>Pro</td>
+            <td>$5 a month, or $50 a year</td>
+            <td>One person: no Community limit, 48 MB per share.</td>
+          </tr>
+          <tr>
+            <td>Organisation</td>
+            <td>$9 per seat a month, or $90 per seat a year</td>
+            <td>
+              Two seats at the fewest. Each seat is a member account with its own allowance and its
+              own Community grant.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        A year costs ten months: the yearly price is the monthly price times ten, and the difference is
+        the two months the plan gives away.
+      </p>
+      <p>
+        <strong>An Organisation plan is sold to a team.</strong> It starts at two seats, and the quantity
+        may not be reduced below two — or below what a subscription bought earlier still pays for. The
+        business that buys the seats is responsible for its members' use of them, and for the content
+        those members publish.
+      </p>
+      <p>
+        <strong>Creem is the merchant of record.</strong> Payments are taken by Creem, not by us. Creem
+        holds the card, issues the invoice, and handles sales tax and VAT; its own terms apply to the
+        payment itself. We never see your card details.
+      </p>
+
+      <h3>Renewal, and changes to the price</h3>
+      <p>
+        A subscription is charged in advance for each period and <strong>renews automatically</strong>
+        until you cancel it. The renewal covers the same plan, the same period and the same number of
+        seats, at the price in force at that renewal.
+      </p>
+      <p>
+        If we change a price, we tell you at least <strong>30 days before</strong> the renewal it would
+        apply to, at the email address on the account. You may cancel before that renewal and pay
+        nothing more; if you do not cancel, the new price applies from it.
+      </p>
+
+      <h3>Offers and discount codes</h3>
+      <p>
+        A discount applies only for the periods its terms state, to the products it names, and to one
+        subscription per account unless we say otherwise. When it ends, the subscription renews at the
+        plan's normal price. Discounts have no cash value and cannot be exchanged for a refund, and we
+        may end an offer for subscriptions started after that.
+      </p>
+      <p>
+        A discount given to a checkout is not applied again when an existing subscription moves to
+        another plan: an upgrade is charged at the price on the subscription, prorated as section 4
+        describes.
+      </p>
+
+      <h2>4. Changing or ending a plan</h2>
+      <ul>
+        <li>
+          <strong>Moving up</strong> is immediate: the plan changes on the subscription you already
+          have, and Creem charges the difference for the rest of the period to the card on file.
+        </li>
+        <li>
+          <strong>More seats</strong> are charged the same way — a seat used today is paid for today.
+        </li>
+        <li>
+          <strong>Fewer seats</strong> are not refunded. The smaller quantity is billed from the next
+          renewal.
+        </li>
+        <li>
+          <strong>Cancelling</strong> stops the next renewal. The plan keeps running to the end of the
+          period you have already paid for, and that time is not refunded.
+        </li>
+        <li>
+          <strong>Deleting your account</strong> cancels the subscription, so nothing further is charged,
+          and the period already paid for runs out. That remaining time is not refunded.
+        </li>
+      </ul>
+      <p>
+        The two periods are not interchangeable on one subscription: moving between a monthly and a
+        yearly plan means cancelling, and buying the period you want once the paid one has run out.
+      </p>
+
+      <h3>Your rights as a consumer</h3>
+      <p>
+        Nothing in these terms removes a right the law gives you where you live, and where these terms
+        and that law disagree, the law wins.
+      </p>
+      <p>
+        If you are a consumer in the European Union, the United Kingdom, or another place with a
+        comparable rule, you normally have <strong>14 days</strong> to withdraw from the purchase of a
+        digital service without giving a reason. That right ends once the service has been fully
+        performed with your agreement — in practice, once you have started using the plan you bought.
+        Where it still applies, write to
+        <a href="mailto:legal@accessflows.com">legal@accessflows.com</a> and we refund what was paid, to
+        the payment method Creem used, within 14 days of your notice.
+      </p>
+      <p>
+        A refund beyond what this section and section 13 require is Creem's decision as merchant of
+        record, not something the app can issue. If something was charged that should not have been,
+        write to us and we will help sort it out.
+      </p>
+
+      <h2>5. What stays on your machine, and what is synchronised</h2>
+      <p>
+        Responses, request history, your secrets, certificates and the files you keep in a collection
+        stay on your computer, in the application's own store. We do not run a proxy in the middle of
+        your API traffic, and we do not see the requests you send or the responses you receive.
+      </p>
+      <p>
+        Collections, requests and environment values <em>are</em> synchronised to your account when you
+        sign in, so the workspace opens on another machine. What that includes, and what it deliberately
+        leaves behind, is set out in the <a href="./privacy.html">Privacy Policy</a>; environment values
+        marked as secret are never synchronised.
+      </p>
+      <p>
+        That also means the copy on your machine is the one you are responsible for. Keep whatever
+        backup suits you.
+      </p>
+
+      <h2>6. What you share</h2>
+      <p>
+        A shared collection is stored on our servers so that the people you shared it with can open it.
+        What you publish is what leaves your machine: check it before you share it. A collection whose
+        environments carry secret values cannot be published until they are removed.
+      </p>
+      <ul>
+        <li>
+          You keep ownership of your content. You give us a non-exclusive, worldwide, royalty-free
+          licence to store it, copy it and serve it to the people you shared it with — for as long as it
+          is shared, and no longer. It ends when you unshare, except for backups and the copies a
+          recipient already has.
+        </li>
+        <li>Do not share what is not yours to share, and do not publish secrets, tokens or personal data of other people.</li>
+        <li>You can unshare at any time; the link stops working, and the stored copy is deleted shortly after.</li>
+      </ul>
+
+      <h3>Content that infringes, and how to report it</h3>
+      <p>
+        If something published through AccessFlows infringes your copyright or another right, or is
+        unlawful, write to <a href="mailto:legal@accessflows.com">legal@accessflows.com</a> with: what
+        the right or the law is; the exact link of the content complained about; enough information for
+        us to find you (name, address, email); a statement that you believe in good faith the use is not
+        authorised; a statement that what you gave us is accurate and that you are the owner or are
+        authorised to act for them; and your signature.
+      </p>
+      <p>
+        We hide or remove content that a valid notice identifies, and we tell the account that published
+        it so that it can answer. An account that keeps publishing infringing or unlawful content loses
+        Community sharing, and an account that keeps at it loses its account. If you believe something
+        of yours was removed by mistake, write to the same address with the link and your reasons, and we
+        restore it where the answer holds up.
+      </p>
+
+      <h2>7. Community sharing and business accounts</h2>
+      <p>
+        The Community directory is for content a business is willing to publish. Sharing there needs a
+        verified business account: you send details of the business, an administrator reviews them, and
+        the account carries a badge once approved.
+      </p>
+      <p>
+        When you apply you confirm that the details are correct, that you may share the content of your
+        collections, and that those collections contain no secrets or personal data. Verifying a
+        business is not a review of its content, and approval is not an endorsement of it.
+      </p>
+      <p>
+        Verification can be revoked — for a false attestation, for content that should not be public, or
+        when a business asks to be removed. Collections shared to the Community from that account are
+        hidden at once, and deleted 30 days later unless the verification is restored.
+      </p>
+
+      <h2>8. Allowances, and what happens when you exceed them</h2>
+      <p>
+        Each plan carries an allowance: how many collections you may publish, and how large a share may
+        be. The app shows where you stand against it.
+      </p>
+      <p>
+        An account that has been over its published allowance for <strong>twelve months</strong>
+        receives three notices during that year. If it is still over at the end, the shares above the
+        allowance are <strong>unpublished</strong> — not destroyed: they stop being reachable by their
+        links and are deleted 30 days later. Everything within the allowance stays readable, and your own
+        copy on your machine is untouched throughout. Unpublishing the extras, or moving to a plan that
+        covers them, ends the clock at any point.
+      </p>
+
+      <h2>9. Ending an account</h2>
+      <p>
+        You can delete your account from the app at any time. Deleting it cancels the subscription, and
+        the account and the content you shared to our servers are removed. Collections on your own
+        machine are yours and are not touched by it.
+      </p>
+      <p>We may suspend or close an account that:</p>
+      <ul>
+        <li>breaks these terms;</li>
+        <li>is used to publish content that is unlawful, or that infringes someone else's rights;</li>
+        <li>is used to attack the service — probing it, evading its limits, or using it to distribute malware.</li>
+      </ul>
+      <p>
+        Where it is reasonable to do so, we will tell you why and give you a chance to put it right. A
+        suspension because an account broke these terms ends it without a refund of the period running;
+        if we suspend or close an account for any other reason, we refund the unused part of the period
+        paid for.
+      </p>
+
+      <h2>10. Acceptable use</h2>
+      <p>Do not use an account or a share to:</p>
+      <ul>
+        <li>publish content that is illegal where you or the reader is, or that you have no right to publish;</li>
+        <li>
+          publish sexual content involving minors, or material that sexualises or endangers them — we
+          report it, and the account is closed;
+        </li>
+        <li>distribute malware, or material intended to harm the people who open it;</li>
+        <li>
+          harass or threaten someone, or publish another person's private information — their home
+          address, identity documents, health or financial details — without permission;
+        </li>
+        <li>impersonate someone else, or misrepresent which business you speak for;</li>
+        <li>work around an allowance, a quota or a rate limit, or put a load on the service that it is not meant to carry.</li>
+      </ul>
+      <p>
+        Using the application and the services must also comply with the export control and sanctions
+        rules that apply to you: an account may not be used from a country, or by a person, those rules
+        prohibit.
+      </p>
+
+      <h2>11. Availability, and changes to the service</h2>
+      <p>
+        The application is local-first: it works without us, and it keeps working if our servers do not.
+        The parts that need a server — signing in, synchronising, sharing, the Community, billing —
+        depend on services we run and on third parties we use.
+      </p>
+      <p>
+        We may change or retire a feature. If a change takes away something you are paying for, we say so
+        at least 30 days before it happens and, where it is warranted, end the subscription and refund
+        the unused part of the period. If we shut the hosted services down entirely, we give at least 30
+        days' notice and the same refund — and the application keeps working on your machine.
+      </p>
+
+      <h2>12. Disclaimers</h2>
+      <p>
+        The software and the services are provided <strong>as they are</strong>, without warranties of
+        any kind beyond those the law does not let us exclude. We do not promise that the service will be
+        uninterrupted or error-free, or that a shared link will always be available.
+      </p>
+      <p>
+        If you are a consumer, the statutory warranties of your country apply, and nothing here shortens
+        them.
+      </p>
+
+      <h2>13. Liability</h2>
+      <p>
+        To the extent the law allows, we are not liable for indirect or consequential loss, for lost
+        profit or lost data, or for what a third-party API you called does with your request. Our total
+        liability for a claim about the paid service is limited to what you paid for it in the twelve
+        months before the claim.
+      </p>
+      <p>
+        <strong>Nothing in these terms limits or excludes liability</strong> for death or personal injury
+        caused by our negligence, for fraud or fraudulent misrepresentation, for a deliberate breach, or
+        for anything else the law does not allow to be limited. Where you deal as a consumer, the limits
+        above apply only so far as your local law permits them.
+      </p>
+
+      <h2>14. Governing law and disputes</h2>
+      <p>
+        These terms are governed by the laws of <strong>Vietnam</strong>, and the courts of Ho Chi Minh
+        City have jurisdiction over a dispute about them.
+      </p>
+      <p>
+        Two limits on that, because they matter more than the clause: a consumer keeps the protection of
+        the mandatory rules of the country where they live, including the right to bring a claim in their
+        own courts; and before going to court, write to us. Most things are settled in a message.
+      </p>
+
+      <h2>15. Changes to these terms</h2>
+      <p>
+        These terms carry a version, and the account records the version it accepted. When the text
+        changes, the version changes with it, and the version that applied before stays readable. A
+        change that affects what you pay, what you may do, or how a dispute is settled is announced at
+        least 30 days before it takes effect, at the email address on the account; if you do not accept
+        it, you may cancel before it applies. Continuing to use the account after that date means you
+        accept the new text.
+      </p>
+
+      <h2>16. General</h2>
+      <ul>
+        <li>
+          <strong>Entire agreement.</strong> These terms, the Privacy Policy and the MIT licence of the
+          software are the whole agreement between us, and replace anything said before them.
+        </li>
+        <li>
+          <strong>Severability.</strong> If a provision is found unenforceable, it is narrowed as far as
+          needed to make it enforceable, and the rest stays in force.
+        </li>
+        <li>
+          <strong>No waiver.</strong> If we do not enforce something once, that is not a promise never to
+          enforce it.
+        </li>
+        <li>
+          <strong>Assignment.</strong> We may transfer these terms with the service, or to a successor in
+          a merger or a sale of assets, and we will tell you. You may not transfer the account without
+          our agreement.
+        </li>
+        <li>
+          <strong>Force majeure.</strong> Neither of us is liable for a delay caused by something outside
+          our control, though a paid suspension still gives the refund in section 9.
+        </li>
+        <li>
+          <strong>Survival.</strong> The sections about content ownership, disclaimers, liability,
+          governing law and the general terms here continue after the account ends.
+        </li>
+        <li>
+          <strong>Notices.</strong> We write to the email address on the account, and keeping it current
+          is your job. Service notices are sent from <strong>no-reply@accessflows.com</strong>, and a
+          reply to one reaches <a href="mailto:support@accessflows.com">support@accessflows.com</a>.
+        </li>
+        <li>
+          <strong>Language.</strong> These terms are written in English, and the English text governs. A
+          translation is a convenience; where the two differ, English wins.
+        </li>
+        <li>
+          <strong>No third-party beneficiaries.</strong> Nobody but you and us can enforce these terms.
+        </li>
+      </ul>
+
+      <h2>17. Contact</h2>
+      <p>
+        An account, a payment, a cancellation, or anything about how the service works:
+        <a href="mailto:support@accessflows.com">support@accessflows.com</a>.
+      </p>
+      <p>
+        A formal notice, a complaint, a dispute, a claim about these terms, or a privacy request:
+        <a href="mailto:legal@accessflows.com">legal@accessflows.com</a>.
+      </p>
+      <p>
+        Anything that is not private can also go to
+        <a href="https://github.com/accessflows/releases/issues">the public issue tracker</a>.
+      </p>
+
+      <footer>
+        See also the <a href="./privacy.html">Privacy Policy</a>. This page is
+        <code>Version 2026-11.3</code>: the account records the version it accepted, and earlier texts
+        are kept at <a href="./terms-2026-11-2.html">version 2026-11.2</a> and
+        <a href="./terms-2026-11.html">version 2026-11</a>.
+      </footer>
+    </main>
+  </body>
+</html>
