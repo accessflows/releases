@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="referrer" content="no-referrer" />
+    <title>Sub-processors — AccessFlows</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #f8fafc;
+        --card: #ffffff;
+        --text: #0f172a;
+        --muted: #64748b;
+        --border: #e2e8f0;
+        --brand: #2563eb;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0b1220;
+          --card: #111a2b;
+          --text: #f1f5f9;
+          --muted: #94a3b8;
+          --border: #1e293b;
+          --brand: #60a5fa;
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 40px 24px 64px;
+        background: var(--bg);
+        color: var(--text);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-size: 15px;
+        line-height: 1.65;
+      }
+
+      main {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 40px 36px 44px;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: var(--card);
+        box-shadow: 0 18px 44px rgba(15, 23, 42, 0.08);
+      }
+
+      .brand {
+        margin: 0 0 6px;
+        color: var(--brand);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: 30px;
+        line-height: 1.2;
+      }
+
+      .meta {
+        margin: 0 0 8px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .lede {
+        margin: 18px 0 0;
+        padding-top: 18px;
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+      }
+
+      h2 {
+        margin: 32px 0 10px;
+        font-size: 18px;
+        line-height: 1.3;
+      }
+
+      p {
+        margin: 0 0 12px;
+      }
+
+      ul {
+        margin: 0 0 12px;
+        padding-left: 22px;
+      }
+
+      li {
+        margin-bottom: 6px;
+      }
+
+      strong {
+        font-weight: 600;
+      }
+
+      a {
+        color: var(--brand);
+      }
+
+      table {
+        width: 100%;
+        margin: 0 0 16px;
+        border-collapse: collapse;
+        font-size: 14px;
+      }
+
+      th,
+      td {
+        padding: 9px 10px;
+        border-bottom: 1px solid var(--border);
+        text-align: left;
+        vertical-align: top;
+      }
+
+      th {
+        color: var(--muted);
+        font-weight: 600;
+      }
+
+      .note {
+        margin: 18px 0;
+        padding: 12px 14px;
+        border-left: 3px solid var(--brand);
+        border-radius: 8px;
+        background: color-mix(in srgb, var(--brand) 8%, transparent);
+        font-size: 14px;
+      }
+
+      footer {
+        margin-top: 34px;
+        padding-top: 18px;
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="brand">AccessFlows</p>
+      <h1>Sub-processors</h1>
+      <p class="meta">Version 2026-11.1 · Effective 26 November 2026</p>
+
+      <p class="lede">
+        The services that handle data on our behalf, what each one holds, and where it sits. This is the
+        authoritative list; the <a href="./privacy.html">Privacy Policy</a> describes the same
+        arrangements in the reader's words.
+      </p>
+
+      <h2>The list</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Sub-processor</th>
+            <th>What it handles</th>
+            <th>Where</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Supabase</strong></td>
+            <td>
+              Accounts and sessions, the database (synchronised workspaces, shared collections, plans,
+              verification requests), and object storage (avatars, share artwork, snapshot payloads,
+              verification documents, shared workspaces).
+            </td>
+            <td>Japan (Tokyo)</td>
+          </tr>
+          <tr>
+            <td><strong>Creem</strong></td>
+            <td>
+              Checkout, payment, invoices and tax. Creem is the merchant of record and holds the card
+              details; we receive the subscription, its state and the plan it carries.
+            </td>
+            <td>As its own policy states</td>
+          </tr>
+          <tr>
+            <td><strong>Zoho</strong></td>
+            <td>
+              The mailboxes the service writes to and from: <code>no-reply@</code> sends account
+              notices, and <code>support@</code> and <code>legal@</code> receive replies. It handles an
+              email address, the content of a notice, and whatever a person puts in a reply.
+            </td>
+            <td>United States (Zoho Mail)</td>
+          </tr>
+          <tr>
+            <td><strong>GitHub</strong></td>
+            <td>
+              The static pages you are reading, including this one. They carry no scripts, no cookies
+              and no analytics, and the hosting log is GitHub's.
+            </td>
+            <td>United States</td>
+          </tr>
+          <tr>
+            <td><strong>Your sign-in provider</strong> (Google, GitHub or Microsoft)</td>
+            <td>The sign-in itself: the identifier and email address it gives us. Nothing else.</td>
+            <td>As its own policy states</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="note">
+        <strong>Not on this list, deliberately.</strong> No analytics, crash-reporting, advertising or
+        session-recording service is used anywhere in the product. The AI assistant is not a
+        sub-processor: it runs on an API key the reader supplies, and the request goes from their
+        machine to the provider they chose, not through us.
+      </div>
+
+      <h2>What a sub-processor is allowed to do</h2>
+      <ul>
+        <li>Each one handles data only to provide the part of the service described above.</li>
+        <li>
+          Each is bound to confidentiality and to the data-protection terms it offers, which is where the
+          transfer safeguards in the privacy policy come from.
+        </li>
+        <li>
+          None of them is given permission to use what it holds for its own marketing, and none of them
+          is a place your data is sold from.
+        </li>
+      </ul>
+
+      <h2>When this list changes</h2>
+      <p>
+        Adding a sub-processor, or replacing one, is announced <strong>at least 30 days before</strong>
+        it starts handling anything, at the email address on every account. The announcement says what
+        the new service will hold and where it sits.
+      </p>
+      <p>
+        If you object, you may stop using the affected part of the service, or close your account, before
+        the date it takes effect — write to
+        <a href="mailto:legal@accessflows.com">legal@accessflows.com</a> and say so.
+      </p>
+      <p>
+        A transfer that has to happen at once, because a provider is failing or a security matter
+        requires it, is announced as soon as it has happened, with the same detail.
+      </p>
+
+      <h2>How to keep track</h2>
+      <p>
+        This page carries a version and an effective date. Older versions can be asked for at
+        <a href="mailto:legal@accessflows.com">legal@accessflows.com</a>, and an announcement goes out
+        whenever the list changes — you do not have to poll it.
+      </p>
+
+      <footer>
+        See also the <a href="./terms.html">Terms of Service</a>,
+        the <a href="./privacy.html">Privacy Policy</a> and the
+        <a href="./security.html">Security</a> page. This page is
+        <code>Version 2026-11.1</code>, effective 26 November 2026.
+      </footer>
+    </main>
+  </body>
+</html>

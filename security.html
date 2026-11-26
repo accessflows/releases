@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="referrer" content="no-referrer" />
+    <title>Security — AccessFlows</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #f8fafc;
+        --card: #ffffff;
+        --text: #0f172a;
+        --muted: #64748b;
+        --border: #e2e8f0;
+        --brand: #2563eb;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0b1220;
+          --card: #111a2b;
+          --text: #f1f5f9;
+          --muted: #94a3b8;
+          --border: #1e293b;
+          --brand: #60a5fa;
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 40px 24px 64px;
+        background: var(--bg);
+        color: var(--text);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-size: 15px;
+        line-height: 1.65;
+      }
+
+      main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px 36px 44px;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: var(--card);
+        box-shadow: 0 18px 44px rgba(15, 23, 42, 0.08);
+      }
+
+      .brand {
+        margin: 0 0 6px;
+        color: var(--brand);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: 30px;
+        line-height: 1.2;
+      }
+
+      .meta {
+        margin: 0 0 8px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .lede {
+        margin: 18px 0 0;
+        padding-top: 18px;
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+      }
+
+      h2 {
+        margin: 32px 0 10px;
+        font-size: 18px;
+        line-height: 1.3;
+      }
+
+      p {
+        margin: 0 0 12px;
+      }
+
+      ul {
+        margin: 0 0 12px;
+        padding-left: 22px;
+      }
+
+      li {
+        margin-bottom: 7px;
+      }
+
+      strong {
+        font-weight: 600;
+      }
+
+      a {
+        color: var(--brand);
+      }
+
+      .note {
+        margin: 18px 0;
+        padding: 12px 14px;
+        border-left: 3px solid var(--brand);
+        border-radius: 8px;
+        background: color-mix(in srgb, var(--brand) 8%, transparent);
+        font-size: 14px;
+      }
+
+      .limit {
+        margin: 18px 0;
+        padding: 12px 14px;
+        border-left: 3px solid #d97706;
+        border-radius: 8px;
+        background: rgba(217, 119, 6, 0.08);
+        font-size: 14px;
+      }
+
+      footer {
+        margin-top: 34px;
+        padding-top: 18px;
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="brand">AccessFlows</p>
+      <h1>Security</h1>
+      <p class="meta">Version 2026-11.1 · Effective 26 November 2026</p>
+
+      <p class="lede">
+        What we actually do, in the order that matters. This page describes the deployment as it stands —
+        it is not a certification, and the section at the end says what we do not claim.
+      </p>
+
+      <h2>1. The shape of the thing</h2>
+      <p>
+        The application runs on your computer. Most of what you work on never reaches us: responses,
+        request history, certificates and files stay in the application's own store, and the requests you
+        send go from your machine to the endpoint you named, not through a proxy of ours.
+      </p>
+      <p>
+        What does reach us is the account and what you choose to synchronise or share — collections,
+        requests, and environment values with secret-marked variables removed before they are queued.
+      </p>
+
+      <h2>2. Access to your data</h2>
+      <ul>
+        <li>
+          <strong>Row-level rules, not application checks.</strong> A share is served only to the account
+          that owns it and the people it was shared with; a synchronised record only to the account it
+          belongs to; a verification document only to the desk reviewing it. The rules live in the
+          database, so a bug in the app cannot widen them.
+        </li>
+        <li>
+          <strong>Buckets are private except where a picture is meant to be public.</strong> Verification
+          documents and snapshot payloads are in private buckets, reached through a signed address minted
+          for one reader. Avatars and share artwork are public on purpose — an image can then be drawn
+          without signing anything.
+        </li>
+        <li>
+          <strong>The service role is only in the functions.</strong> It never reaches the application,
+          and the functions that use it verify the caller's own token first.
+        </li>
+        <li>
+          <strong>Nobody here reads your workspace as a matter of course.</strong> We look at it when you
+          ask us to, when a report of abuse or infringement needs an answer, or when the law requires it —
+          the privacy policy says the same.
+        </li>
+      </ul>
+
+      <h2>3. Secrets</h2>
+      <p>
+        A value marked secret is excluded before a synchronised record is queued, so it is not sent,
+        stored or logged on our side. A collection whose environments carry secret values is refused at
+        publication rather than having them stripped quietly — a published collection that is missing
+        half its configuration is its own kind of broken.
+      </p>
+
+      <h2>4. Sign-in and sessions</h2>
+      <ul>
+        <li>
+          Sign-in is Supabase Auth, with a password or with Google, GitHub or Microsoft. We never receive
+          a provider password.
+        </li>
+        <li>
+          The provider flow uses PKCE and returns to a loopback address on this machine, so the code is
+          exchanged by the application rather than by whatever browser happened to be open.
+        </li>
+        <li>
+          The session is kept in the operating system's own store for the application, not in a browser
+          cookie, and a web build falls back to local storage.
+        </li>
+        <li>
+          An administrator role is a claim only the service role can write; a token that carries it was
+          minted by us, not claimed by a client.
+        </li>
+      </ul>
+
+      <h2>5. In transit, and at rest</h2>
+      <ul>
+        <li>Everything between the application and our servers is TLS; the mail path uses implicit TLS on the submission port.</li>
+        <li>
+          Data at rest sits in Supabase's managed Postgres and object storage in Tokyo, under their
+          encryption.
+        </li>
+        <li>
+          Card details never reach us: checkout, invoices and tax are Creem's, which is the merchant of
+          record.
+        </li>
+      </ul>
+
+      <h2>6. What we deliberately do not run</h2>
+      <p>
+        No analytics, no crash-reporting service, no session recording, no advertising network, and no
+        third-party script on the pages that carry these documents. There is no telemetry in the product
+        at all — which is a security property as much as a privacy one: nothing to leak through, and
+        nothing to be subpoenaed from.
+      </p>
+
+      <h2>7. If something goes wrong</h2>
+      <p>
+        A suspected vulnerability is welcome at
+        <a href="mailto:legal@accessflows.com">legal@accessflows.com</a>, or in the
+        <a href="https://github.com/accessflows/releases/issues">public issue tracker</a> if it is not
+        sensitive. Tell us what you did and what happened; we will tell you what we found, and we will not
+        pursue somebody who was trying to help.
+      </p>
+      <p>
+        If a breach affects your data, we tell you without undue delay — what happened, what it touched,
+        and what we are doing — and we tell the authorities where the law requires it.
+      </p>
+
+      <h2>8. What we do not claim</h2>
+      <div class="limit">
+        <strong>No certification, no audit report, no contractual SLA.</strong> We hold no SOC 2, ISO
+        27001 or similar attestation, and this page is not a substitute for one. We do not offer a
+        contractual uptime commitment, a contractual backup guarantee, or a right to audit. If a
+        procurement needs any of those, say so at
+        <a href="mailto:legal@accessflows.com">legal@accessflows.com</a> and we will say plainly whether
+        we can meet it — rather than let a document imply we can.
+      </div>
+      <p>
+        Your local copy is the primary one. Nothing we hold is a backup of your work, and a workspace that
+        was never synchronised cannot be restored by us.
+      </p>
+
+      <footer>
+        See also the <a href="./terms.html">Terms of Service</a>,
+        the <a href="./privacy.html">Privacy Policy</a>, the
+        <a href="./acceptable-use.html">Acceptable Use Policy</a> and the
+        <a href="./sub-processors.html">sub-processor list</a>. This page is
+        <code>Version 2026-11.1</code>, effective 26 November 2026.
+      </footer>
+    </main>
+  </body>
+</html>
